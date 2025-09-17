@@ -8,12 +8,12 @@ const synth = note(`<
 [f4 ~ g#4 a#4 c5 ~ c5 a#4 c5 ~ a#4 ~ c5 a#4 ~ c5 ~ ~ c5 ~ d#5 ~ f5 d#5 c5 ~ d#5 ~ c5 d5 ~ ~] 
 [f5 ~ f5 ~ g5 ~ g#5 f5 g#5 ~ a#5 ~ a#5 g#5 ~ f5 ~ ~ a#4 ~ c5 ~ d#5 ~ f5 ~ ~ ~ ~ ~ ]
 [f5 d#5 d#5 f5 ~ ~ ~ ~ c5 ~ c5 ~ d#5 ~ ~ ~ ~ f4 ~ g#4 ~ a#4 ~ c5 c4 c4 ~ c4 d#4 f4 ~]
->*4`).sound("gm_synth_choir").slow(8).gain(0.7).room(2)
+>*4`).sound("gm_synth_choir").slow(8).gain(0.4).room(5)
 
-const drums = sound("bd ~ ~ bd ~ ~ bd ~ ~ ~ oh ~ hh ~ ~ ~ ~ ").gain(0.8)
-.bank("ace").room(0.2)
+const drums = sound("bd ~ ~ bd ~ ~ bd ~ ~ ~ oh ~ hh ~ ~ ~ ").gain(0.5)
+.bank("ace").room(0.2).distort(0.3).lpf(8000)
 
-const pad = note(`< [b3] ~ [d3] ~ >`).sound("gm_fx_soundtrack").duration(2).gain(0.8)
+const pad = note(`< [a3] ~ [d3] ~ >`).sound("gm_fx_soundtrack").duration(2).gain(0.5)
 
 const green = "#5FB147"
 stack(
